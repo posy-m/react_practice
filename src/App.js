@@ -33,13 +33,13 @@ function App() {
     <div className="App">
       {/* <Header /> */}
 
-      <section >
+      <section id='examples'>
         <h2>Examples</h2>
         <menu>
-          <TabButton onSelect={() => clickHandler('components')}>Componenets</TabButton>
-          <TabButton onSelect={() => clickHandler('jsx')}>JSX</TabButton>
-          <TabButton onSelect={() => clickHandler('props')}>Props</TabButton>
-          <TabButton onSelect={() => clickHandler('state')}>State</TabButton>
+          <TabButton isSelected={change === 'components'} onSelect={() => clickHandler('components')}>Componenets</TabButton>
+          <TabButton isSelected={change === 'jsx'} onSelect={() => clickHandler('jsx')}>JSX</TabButton>
+          <TabButton isSelected={change === 'props'} onSelect={() => clickHandler('props')}>Props</TabButton>
+          <TabButton isSelected={change === 'state'} onSelect={() => clickHandler('state')}>State</TabButton>
         </menu>
         {!change ? <p>내용을 하나 선택해 주세요</p> : (<div>
           <h3>{EXAMPLES[change].title}</h3>
